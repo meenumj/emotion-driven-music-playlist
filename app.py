@@ -164,36 +164,5 @@ def suggest_music():
     return jsonify(detected_emotion=most_detected_emotion, suggested_playlist=playlists[most_detected_emotion])
     
     
-    
-    
-    
-    
-    
-    # if(most_detected_emotion == "happy"):  # Placeholder, replace with actual emotion detection logic
-    #     suggested_playlist = "https://youtube.com/playlist?list=PLe9Ra07TFcfmo6i2v232bOF4C-1eeUySK&si=XoC5QjKOex0qLZNx'"  # Placeholder, replace with actual suggested playlist
-    
-    # # Return JSON response containing detected emotion and suggested playlist
-    #     return jsonify(detected_emotion=most_detected_emotion, suggested_playlist=playlists[most_detected_emotion])
-    
-    # else:
-    #     suggested_playlist= "https://youtube.com/playlist?list=PLe9Ra07TFcfmo6i2v232bOF4C-1eeUySK&si=XoC5QjKOex0qLZNx"
-    #     return jsonify(detected_emotion=most_detected_emotion, suggested_playlist=playlists[most_detected_emotion])
-
-    
-    # Define playlists for each emotion
-#     playlists = {
-#     'angry': 'https://youtube.com/playlist?list=PLe9Ra07TFcfnnzCSxE3nVU2P4uIPT7tiL&si=LB6UREpLHJeatnKm',
-#     'disgust': 'https://youtube.com/playlist?list=PLe9Ra07TFcfnnzCSxE3nVU2P4uIPT7tiL&si=LB6UREpLHJeatnKm',
-#     'fear': 'https://youtube.com/playlist?list=PLe9Ra07TFcfnnzCSxE3nVU2P4uIPT7tiL&si=LB6UREpLHJeatnKm',
-#     'happy': 'https://youtube.com/playlist?list=PLe9Ra07TFcfmo6i2v232bOF4C-1eeUySK&si=XoC5QjKOex0qLZNx',
-#     'neutral': 'https://youtube.com/playlist?list=PLe9Ra07TFcfnnzCSxE3nVU2P4uIPT7tiL&si=LB6UREpLHJeatnKm',
-#     'sad': 'https://youtube.com/playlist?list=PLe9Ra07TFcfmlP1aPKAGW1zgXXtHSYaK4&si=NIEzcV4nOO7jU2sS',
-#     'surprise': 'https://youtube.com/playlist?list=PLe9Ra07TFcfmo6i2v232bOF4C-1eeUySK&si=XoC5QjKOex0qLZNx'
-# }
-
-    # Return JSON response containing detected emotion and suggested playlist
-    # return jsonify(detected_emotion=most_detected_emotion, suggested_playlist=playlists[most_detected_emotion])
-
-    
 if __name__ == '__main__':
     app.run(debug=True)
