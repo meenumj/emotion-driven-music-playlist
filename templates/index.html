@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            color: black; 
+            background-color: #ffffff;
+            margin-bottom:30px;
+            margin-top: 30px;
+            margin-left:30px;
+            margin-right:30px;
+
+        }
+        .image-container {
+            margin-bottom: 20px;
+        }
+        .playlist-link {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: #800080;">
+    <div class="container">
+        <h1> Songs Playlist </h1>
+        <form action="/detect_emotion" method="post" enctype="multipart/form-data" class="image-container">
+            <input type="file" name="image" required>
+            <button type="submit">Suggest Songs</button>
+        </form>
+        <a href="/realtime_emotion_detection" class="playlist-link">Songs Based On Real-time Emotion Detection</a>
+        {% if detected_emotion %}
+        <div class="result-container">
+            <h2>Detected Emotion: {{ detected_emotion }}</h2>
+            <img src="data:image/jpeg;base64,{{ img_base64 }}" alt="Detected Image" style="max-width: 500px; height:250px">
+            <p><a href="{{ playlist }}">Suggested Playlist: {{ detected_emotion }}</a></p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
